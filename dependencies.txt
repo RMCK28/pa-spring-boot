@@ -1,0 +1,7 @@
+DevTools
+H2
+JPA
+MySQL
+ThymeLeaf
+Web
+Lombok
