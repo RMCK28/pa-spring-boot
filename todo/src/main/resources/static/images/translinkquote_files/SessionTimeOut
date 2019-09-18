@@ -1,0 +1,1 @@
+function Resettimeout(){$.ajax({type:"POST",url:"../Request/SessionTimeOut"})}$("[id='sessiontimeout-warnig']").dialog({autoOpen:!1,modal:!0,resizable:!1,title:"Warning",width:360});var ajaxCallHandler,timerHandler,ajaxCallCount=0,timeOut=2,timeOutInSeconds=12e4,timeWarnig=timeOutInSeconds/3e4-2
