@@ -41,6 +41,7 @@
 			</li>
 			<li class="nav-item"><a class="nav-link" href="/first list">First
 					List</a></li>
+<!-- need to change the href to: /firstList so it is exactly the same that it is in your controller under @GetMapping -->
 			<li class="nav-item"><a class="nav-link" href="/second list">Second
 					List</a></li>
 		</ul>
@@ -69,7 +70,7 @@
 				</tr>
 			</thead>
 			<tbody>
-					<tr th:each="firstName : ${firstList}">
+				<tr th:each="firstName : ${firstList}">
 				<td th:text= "${firstName.name}"></td>
 				<td th:text= "${firstDescription.description}"></td>
 				<td th:text= "${firstUser.user}"></td>
