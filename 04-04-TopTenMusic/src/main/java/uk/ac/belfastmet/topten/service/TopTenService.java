@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 import uk.ac.belfastmet.topten.domain.*;
 
+/**
+ * 
+ * @author MCK18137665
+ *
+ */
 @Service
 public class TopTenService {
 
@@ -42,6 +47,8 @@ public class TopTenService {
 		this.albumTopTen.add(new TopTen("eight", "Album8", "Album8.png"));
 		this.albumTopTen.add(new TopTen("nine", "Album9", "Album9.png"));
 		this.albumTopTen.add(new TopTen("ten", "Album10", "Album10.png"));
+
+		return albumTopTen;
 
 	}
 }

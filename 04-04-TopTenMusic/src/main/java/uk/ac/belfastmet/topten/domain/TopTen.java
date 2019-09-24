@@ -5,7 +5,16 @@ public class TopTen {
 	private String artist;
 	private String album;
 	private String image;
-	
+
+	/**
+	 * 
+	 * @param number in order of top ten
+	 * @param Artist or album name
+	 * @param img    of artist or album
+	 */
+	public TopTen(String number, String Artist, String img) {
+
+	}
 
 	public String getArtist() {
 		return artist;

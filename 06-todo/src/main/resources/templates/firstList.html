@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<!-- Custom Styles  -->
+
+<title th:text="${pageTitle}">First List</title>
+
+<style>
+/* Modify the background color */
+.navbar-custom {
+	background-color: lightgreen;
+}
+/* Modify brand and text color */
+.navbar-custom .navbar-brand, .navbar-custom .navbar-text {
+	color: green;
+}
+</style>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-light bg-warning">
+		<a class="navbar-brand" href="#"> </a>
+	</nav>
+
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+		<ul class="navbar-nav">
+			<li class="nav-item active"><a class="nav-link" href="/">Home</a>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="/first list">First
+					List</a></li>
+			<li class="nav-item"><a class="nav-link" href="/second list">Second
+					List</a></li>
+		</ul>
+	</nav>
+	<div class="jumbotron text-center">
+
+		<h1>First List</h1>
+		<h2 th:text="${firstList}"></h2>
+
+		<br/>
+
+	</div>
+
+
+	<div class="container">
+
+		<p>This page will contain information about the first list</p>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>User</th>
+					<th>Priority</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr th:each="firstName : ${firstList}">
+				<td th:text= "${firstName.name}"></td>
+				<td th:text= "${firstDescription.description}"></td>
+				<td th:text= "${firstUser.user}"></td>
+				<td th:text= "${firstPriority.priority}"></td>
+				<td th:text= "${firstStatus.status}"></td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+</body>

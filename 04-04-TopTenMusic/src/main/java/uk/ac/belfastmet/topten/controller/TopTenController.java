@@ -7,16 +7,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import uk.ac.belfastmet.topten.service.TopTenService;
 
+/**
+ * 
+ * @author MCK18137665
+ *
+ */
 @Controller
 @RequestMapping
 public class TopTenController {
 
+	/**
+	 * 
+	 * @return homePage html file
+	 */
 	@GetMapping()
 	public String homePage() {
 
 		return "Index";
 	}
 
+	/**
+	 * 
+	 * @param model artist page
+	 * @return top ten artists html file
+	 */
 	@GetMapping("/Artist")
 	public String artistPage(Model model) {
 
@@ -27,6 +41,11 @@ public class TopTenController {
 		return "artistTopTen";
 	}
 
+	/**
+	 * 
+	 * @param model album page
+	 * @return top ten albums html file
+	 */
 	@GetMapping("/Album")
 	public String albumPage(Model model) {
 
