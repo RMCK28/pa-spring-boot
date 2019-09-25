@@ -8,4 +8,3 @@ import uk.ac.belfastmet.todo.domain.*;
 public interface TaskRepository extends CrudRepository<Task, Long> {
 
 }
-

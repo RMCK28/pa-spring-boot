@@ -43,12 +43,13 @@
 					List</a></li>
 			<li class="nav-item"><a class="nav-link" href="/second list">Second
 					List</a></li>
+					
 		</ul>
 	</nav>
 	<div class="jumbotron text-center">
 
 		<h1>Second List</h1>
-		<h2 th:text="${secondList}"></h2>
+		<h2 th:text="${subtitle}"></h2>
 
 		<br />
 
@@ -58,6 +59,7 @@
 	<div class="container">
 
 		<p>This page will contain information about the second list</p>
+		<!--  
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -65,21 +67,19 @@
 					<th>Description</th>
 					<th>User</th>
 					<th>Priority</th>
-					<th>Status</th>
 				</tr>
 			</thead>
 			<tbody>
-			<tr th:each="secondName : ${secondList}">
-				<td th:text= "${secondName.name}"></td>
-				<td th:text= "${secondDescription.description}"></td>
-				<td th:text= "${secondUser.user}"></td>
-				<td th:text= "${secondPriority.priority}"></td>
-				<td th:text= "${secondStatus.status}"></td>
+				<tr th:each="secondName : ${secondList}">
+					<td th:text="${secondName.name}"></td>
+					<td th:text="${secondDescription.description}"></td>
+					<td th:text="${secondUser.user}"></td>
+					<td th:text="${secondPriority.priority}"></td>
 				</tr>
-				
+
 			</tbody>
 		</table>
 
-
+-->
 	</div>
 </body>

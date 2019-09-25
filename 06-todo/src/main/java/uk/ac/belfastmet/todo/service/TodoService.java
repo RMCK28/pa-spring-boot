@@ -12,23 +12,39 @@ import uk.ac.belfastmet.todo.repository.TaskRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Logger
+ * 
+ * @author MCK18137665
+ *
+ */
 @Service
 public class TodoService {
+
 	private static Logger logger = LoggerFactory.getLogger(TodoService.class);
 
 	@Autowired
 	private TaskRepository taskRepository;
 
-	public void getNumberOfTasks() {
+	public Iterable<Task> getNumberOfTasks() {
 
 		logger.info("# of tasks: {}", taskRepository.count());
 
-		Iterable<Task> tasks = taskRepository.findAll();
-		Iterator<Task> iterator = tasks.iterator();
+		Iterable<Task> toDoTasks = taskRepository.findAll();
+		Iterator<Task> iterator = toDoTasks.iterator();
+		ArrayList<Task> taskList = new ArrayList<Task>();
+
 		while (iterator.hasNext()) {
-			logger.info("{}", iterator.next().toString());
+			taskList.add(iterator.next());
+			// logger.info("{}", iterator.next().toString());
+
 		}
+		return taskList;
 	}
+
+	// public ArrayList getList() {
+	// return null;
+	// }
 
 	// public ArrayList getTasks() {
 

@@ -44,12 +44,13 @@
 <!-- need to change the href to: /firstList so it is exactly the same that it is in your controller under @GetMapping -->
 			<li class="nav-item"><a class="nav-link" href="/second list">Second
 					List</a></li>
+					
 		</ul>
 	</nav>
 	<div class="jumbotron text-center">
 
 		<h1>First List</h1>
-		<h2 th:text="${firstList}"></h2>
+		<h2 th:text="${title}"></h2>
 
 		<br/>
 
@@ -59,6 +60,7 @@
 	<div class="container">
 
 		<p>This page will contain information about the first list</p>
+		<!-- 
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -66,7 +68,7 @@
 					<th>Description</th>
 					<th>User</th>
 					<th>Priority</th>
-					<th>Status</th>
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -75,11 +77,11 @@
 				<td th:text= "${firstDescription.description}"></td>
 				<td th:text= "${firstUser.user}"></td>
 				<td th:text= "${firstPriority.priority}"></td>
-				<td th:text= "${firstStatus.status}"></td>
+				
 				</tr>
 			</tbody>
 		</table>
-
+ -->
 
 	</div>
 </body>
